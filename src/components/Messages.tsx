@@ -32,7 +32,7 @@ const Messages: React.FC = () => {
       {loading && <h3>Loading...</h3>}
       <h1>Hello Jim</h1>
       <p>
-        You have {unread} messages out of {messages?.length}
+        You have {unread || 0} unread out of {messages?.length} messages
       </p>
       <button onClick={() => navigate(`/messages`)}>View Messages</button>
     </div>
